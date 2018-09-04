@@ -29,7 +29,7 @@ public class EchoServer {
                 System.out.println("Connected to client");
                 BufferedReader br = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
                 PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
-                Thread thread = new Thread(new ConnectedUser(clientSocket, br,out));
+                Thread thread = new Thread(new ConnectedUser(clientSocket, br, out));
                 thread.start();
             }
 
